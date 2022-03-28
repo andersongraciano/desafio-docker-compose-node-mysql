@@ -8,7 +8,7 @@ const config = {
 };
 
 
-const setPeople = (con) => {
+const setPeople = () => {
     var con = mysql.createConnection(config)
     con.query(`INSERT INTO people(name) values('Anderson Graciano')`)
     con.end()
