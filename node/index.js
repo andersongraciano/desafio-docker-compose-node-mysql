@@ -6,7 +6,6 @@ const peopleinsert = require('./peopleinsert')
 const peopleselect = require('./peopleselect')
 
 app.get('/', (req,res) => {
-    peoplecreate.createTable();
     peopleinsert.setPeople();
     peopleselect.getPeoples((con, rows) => {
         res.write(
@@ -23,6 +22,8 @@ app.get('/', (req,res) => {
 })
 
 app.listen(port, ()=> {
+    peoplecreate.createTable();
+    console.log('Tabela criado com sucesso! ')
     console.log('Rodando na porta ' + port)
 })
 
