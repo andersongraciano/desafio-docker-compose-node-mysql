@@ -23,7 +23,7 @@ app.get('/', (req,res) => {
 
 app.listen(port, ()=> {
     peoplecreate.createTable();
-    console.log('Tabela criado com sucesso! ')
+    console.log('Tabela criada com sucesso! ')
     console.log('Rodando na porta ' + port)
 })
 
