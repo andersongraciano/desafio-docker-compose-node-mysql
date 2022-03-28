@@ -14,12 +14,9 @@ app.get('/', (req,res) => {
             "<br/>"+
             "<p><b>People List</b></p>");
 
-        var resultArray = Object.values(JSON.parse(JSON.stringify(rows)))            
-
-        for (let index = 0; index < resultArray.length; index++) {
-            const element = resultArray[index];
-            res.write(element.name+"<br/>");
-        }
+        rows.forEach(element => {
+            res.write("<li>"+element.name+"</li>");
+        });
         res.end();
         con.end();
     });
