@@ -14,7 +14,7 @@ app.get('/', (req,res) => {
             "<p><b>People List</b></p>");
 
         rows.forEach(element => {
-            await res.write("<li>"+element.name+"</li>");
+            res.write("<li>"+element.name+"</li>");
         });
         con.end();
         res.end();
