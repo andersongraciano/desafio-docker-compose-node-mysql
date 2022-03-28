@@ -10,7 +10,7 @@ app.get('/', (req,res) => {
         res.write(
             "<h1>Full Cycle</h1>"+
             "<br/>"+
-            "<p><b>People List</b></p>");
+            "<p><b>People Listt</b></p>");
 
         var resultArray = Object.values(JSON.parse(JSON.stringify(rows)))            
 
