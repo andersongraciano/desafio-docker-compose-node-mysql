@@ -21,9 +21,10 @@ app.get('/', (req,res) => {
     });
 })
 
+peoplecreate.createTable();
+console.log('Tabela criada com sucesso! ')
+
 app.listen(port, ()=> {
-    peoplecreate.createTable();
-    console.log('Tabela criada com sucesso! ')
     console.log('Rodando na porta ' + port)
 })
 
