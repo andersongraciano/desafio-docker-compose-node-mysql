@@ -13,3 +13,4 @@ mysql/private_key.pem
 mysql/public_key.pem
 mysql/server-cert.pem
 mysql/server-key.pem
+node/node_modules
