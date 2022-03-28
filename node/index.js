@@ -8,13 +8,14 @@ const peopleselect = require('./peopleselect')
 app.get('/', (req,res) => {
     peopleinsert.setPeople();
     peopleselect.getPeoples((con, rows) => {
+        res.writeHead(200, {'Content-Type': 'text/html'});        
         res.write(
             "<h1>Full Cycle</h1>"+
             "<br/>"+
             "<p><b>People List</b></p>");
 
         rows.forEach(element => {
-            res.write("<li>"+element.name+"</li>");
+            res.write("<li>"+element.name+"</li>\n");
         });
         con.end();
         res.end();
