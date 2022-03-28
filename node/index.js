@@ -17,8 +17,8 @@ app.get('/', (req,res) => {
         rows.forEach(element => {
             res.write("<li>"+element.name+"</li>");
         });
-        res.end();
         con.end();
+        res.end();
     });
 })
 
