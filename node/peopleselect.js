@@ -1,4 +1,5 @@
 var mysql = require('mysql');
+const util = require('util');
 
 const config = {
     host: 'db',
@@ -13,7 +14,7 @@ const getPeoples = (callback) => {
 
     con.connect(function(err) {
         if (err) throw err;
-        con.query("SELECT name FROM people", function (err, rows) {
+        await con.query("SELECT name FROM people", function (err, rows) {
             if (err) throw err;
             callback(con, rows);
         });
